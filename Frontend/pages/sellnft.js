@@ -255,7 +255,7 @@ export default function CreateItem() {
                 {isCreating ? (
                   <div className="flex items-center justify-center">
                     <TailSpin color="#fff" height={24} width={24} />
-                    <span className="ml-2">Creating Ticket...</span>
+                    <span className="ml-2">Minting Ticket...</span>
                   </div>
                 ) : (
                   "Create Ticket"
