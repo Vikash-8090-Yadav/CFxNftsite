@@ -81,7 +81,7 @@ export default function CreatorDashboard() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 truncate">{nft.name}</h3>
                 <p className="text-gray-600 mb-4 h-12 overflow-hidden">{nft.description}</p>
                 <div className="flex justify-between items-center">
-                  <p className="text-2xl font-bold text-indigo-600">{nft.price} ETH</p>
+                  <p className="text-2xl font-bold text-indigo-600">{nft.price} CFX</p>
                 </div>
               </div>
             </div>

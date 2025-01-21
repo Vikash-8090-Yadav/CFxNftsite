@@ -14,16 +14,16 @@ function NavLink({ to, children }) {
 }
 
 const networks = {
-  NeoTestnet: {
-    chainId: `0x${Number(12227332).toString(16)}`,
-    chainName: "NeoTestnet",
+  CFXTestnet: {
+    chainId: `0x${Number(71).toString(16)}`,
+    chainName: "CFXTestnet",
     nativeCurrency: {
-      name: "NeoTestnet",
-      symbol: "GAS",
+      name: "CFXTestnet",
+      symbol: "CFX",
       decimals: 18,
     },
-    rpcUrls: ["https://neoxt4seed1.ngd.network"],
-    blockExplorerUrls: ['https://xt4scan.ngd.network/'],
+    rpcUrls: ["https://evmtestnet.confluxrpc.com"],
+    blockExplorerUrls: ['https://www.confluxscan.io/'],
   },
 }
 
@@ -60,7 +60,7 @@ export default function Navbar() {
     let web3 = new Web3(window.ethereum)
 
     const chainId = await web3.eth.getChainId()
-    const NeoTestnetChainId = parseInt(networks.NeoTestnet.chainId, 16)
+    const NeoTestnetChainId = parseInt(networks.CFXTestnet.chainId, 16)
 
     console.log(parseInt(chainId))
     console.log("The neo testnet chain id is", parseInt(chainId))
@@ -71,7 +71,7 @@ export default function Navbar() {
       await window.ethereum.request({
         method: "wallet_addEthereumChain",
         params: [{
-          ...networks["NeoTestnet"]
+          ...networks["CFXTestnet"]
         }]
       })
     }
@@ -104,7 +104,7 @@ export default function Navbar() {
   }
 
   const getEtherscanLink = (address) => {
-    return `https://xt4scan.ngd.network/address/${address}`
+    return `https://evmtestnet.confluxscan.io/address/${address}`
   }
 
   return (
@@ -172,7 +172,7 @@ export default function Navbar() {
                       </div>
                       <div className="px-4 py-3 text-sm text-gray-200 border-b border-gray-700">
                         <p className="font-medium text-yellow-400">Balance</p>
-                        <p>{parseFloat(balance).toFixed(4)} GAS</p>
+                        <p>{parseFloat(balance).toFixed(4)} CFX</p>
                       </div>
                       <button
                         onClick={handleLogout}

@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Home from "./marketplace"
 import Link from 'next/link'
 import Navbar from "../Component/Course/Nav"
 
+import CreatorDashboard from './dashboard'
 export default function Market() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-900 via-blue-800 to-indigo-900">
@@ -18,7 +18,7 @@ export default function Market() {
         
 
         <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-xl p-8">
-          <Home />
+          <CreatorDashboard />
         </div>
       </main>
 
